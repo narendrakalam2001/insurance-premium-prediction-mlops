@@ -59,7 +59,7 @@ Trained on the real Kaggle Playground S4E12 competition data (1,199,999 rows aft
 | Service | URL |
 |---|---|
 | 🚀 **FastAPI (Swagger UI)** | [https://insurance-premium-prediction-mlops.onrender.com/docs](https://insurance-premium-prediction-mlops.onrender.com/docs) |
-| 📊 **Monitoring Dashboard** | [https://insurance-premium-prediction-mlops.streamlit.app](https://insurance-premium-prediction-mlops.streamlit.app) |
+| 📊 **Monitoring Dashboard** | [https://insurance-premium-prediction-mlops-dashboard.streamlit.app](https://insurance-premium-prediction-mlops-dashboard.streamlit.app) |
 | 📓 **EDA Notebook** | [notebooks/insurance_premium_eda.ipynb](notebooks/insurance_premium_eda.ipynb) |
 
 > ⚠️ Render free tier: first request may take 30–60 seconds (cold start).
