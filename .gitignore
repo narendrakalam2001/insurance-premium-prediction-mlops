@@ -1,0 +1,74 @@
+# ============================================================
+# .GITIGNORE — Insurance Premium Prediction ML System
+# Rebuilt for: GitHub push + Render (API) + Streamlit Cloud (dashboard)
+#
+# RULE OF THUMB: anything Render or Streamlit Cloud reads at runtime
+# MUST be pushed to GitHub — these platforms deploy directly from your
+# repo, they don't see your local machine's files.
+#
+# MUST be pushed (do NOT ignore):
+#   premium_models/     -> champion .joblib + latest_model.json + model
+#                           cards + monitor_scores.csv + feature_drift_report.csv
+#                           + challenger_log.json  (Render loads the model from
+#                           here; Streamlit reads the CSV/JSON files from here)
+#   data/                -> sample dataset (small file — see note below)
+#   src/ serving/ services/ monitoring/ simulation/ scripts/  -> all source code
+#   requirements*.txt, Dockerfile*, render.yaml, docker-compose.yml
+#   docs/                -> README images/gifs/svg (renders on GitHub)
+#   notebooks/           -> EDA notebook + html export
+# ============================================================
+
+# ── Python cache/build artifacts ─────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Virtual environments / secrets ───────────────────────────
+venv/
+env/
+.env
+.venv/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── MLflow tracking store — large, regenerable locally, not needed
+#    for Render/Streamlit (they only read premium_models/, not mlruns/) ─
+mlruns/
+mlartifacts/
+mlflow.db
+
+# ── Prediction logs — auto-generated at runtime by the API, not
+#    needed for the app to boot; keep the folder with a placeholder
+#    so git tracks it, but not the growing CSV itself ─────────
+!logs/*.csv
+logs/*.log
+!logs/.gitkeep
+
+# ── Test / coverage artifacts ─────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── OS / editor junk ──────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ============================================================
+# ⚠️ SAFETY NET — do NOT commit the FULL real Kaggle competition
+# file (train.csv, ~185MB) if you ever copy it into data/ — GitHub
+# hard-blocks any single file over 100MB. Only the small sample
+# dataset should live in data/. If your real train.csv ever ends
+# up inside this repo folder, uncomment the line below (rename to
+# match your actual filename) before committing:
+# data/train.csv
+# ============================================================

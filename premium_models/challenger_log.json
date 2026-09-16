@@ -1,0 +1,12 @@
+[
+  {
+    "decision": "PROMOTED",
+    "reason": "No existing champion \u2014 first model auto-promoted",
+    "challenger_name": "RandomForest",
+    "challenger_rmse": 852.982,
+    "challenger_r2": 0.0265,
+    "champion_name": null,
+    "champion_rmse": null,
+    "evaluated_at": "2026-09-14 08:42:27"
+  }
+]

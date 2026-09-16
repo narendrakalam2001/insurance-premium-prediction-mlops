@@ -1,0 +1,20 @@
+Insurance Premium Prediction
+Kaggle Playground Series S4E12
+======================================================================
+
+Original rows: 1,200,000
+Original columns: 21
+Sample rows: 50,000
+Sample columns: 21
+Target column: Premium Amount
+Problem type: Regression
+Target type: Continuous
+Evaluation metric: RMSLE
+
+Sampling method:
+20-bin target quantile-based proportional sampling.
+
+Purpose:
+GitHub-ready representative sample for EDA,
+feature engineering, regression modeling,
+RMSLE evaluation and explainability.

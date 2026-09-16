@@ -1,0 +1,32 @@
+# ============================================================
+# .dockerignore — Insurance Premium Prediction ML System
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+.venv/
+venv/
+env/
+
+notebooks/
+*.ipynb
+
+docs/
+
+tests/
+
+.git/
+.gitignore
+
+.vscode/
+.idea/
+
+.env
+*.env
+
+.DS_Store
+Thumbs.db
